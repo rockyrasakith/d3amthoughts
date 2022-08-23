@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "d3amthoughts_backend": {
+      "main": "src/d3amthoughts_backend/main.mo",
+      "type": "motoko"
+    },
+    "d3amthoughts_frontend": {
+      "dependencies": [
+        "d3amthoughts_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/d3amthoughts_frontend/src/index.html"
+      },
+      "source": [
+        "src/d3amthoughts_frontend/assets",
+        "dist/d3amthoughts_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
